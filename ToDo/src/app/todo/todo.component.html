@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="form">
+    <h2>ToDo</h2>
+    <span>
+      <input type="text" placeholder="Add Items" #todo />
+      <button  class="btn btn-primary" (click)="addToDo(todo)">Add</button>
+    </span>
+  </div>
+  <div class="list-todo">
+    <div class="item" *ngFor="let todo of todoArray">
+      <ul>
+        <li>{{todo}}
+        <button class="btn btn-danger" (click)="deleteTodo(todo)">X</button>
+       </li>
+      </ul>
+      
+    </div>
+  </div>
+</div>
